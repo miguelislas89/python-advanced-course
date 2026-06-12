@@ -31,6 +31,8 @@ line_length = 88
 [tool.ruff]
 target-version = "py312"
 line-length = 88
-# Reglas analíticas activadas por defecto
+
+[tool.ruff.lint]
+# Movimos select e ignore dentro de su sección oficial
 select = ["E", "F", "B", "I", "N", "W"]
 ignore = []

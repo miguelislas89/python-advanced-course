@@ -1,0 +1,6 @@
+[
+  {"producto": "Agua de Rosas", "categoria": "Cuidado Facial", "volumen_ml": 500, "stock": 25, "precio_unitario": 150.00},
+  {"producto": "Shampoo de Mango", "categoria": "Cuidado Capilar", "volumen_ml": 500, "stock": 20, "precio_unitario": 180.50},
+  {"producto": "Aceite de Semilla de Uva", "categoria": "Cuidado Corporal", "volumen_ml": 200, "stock": 15, "precio_unitario": 220.00},
+  {"producto": "Jabón de Carbón Activado", "categoria": "Limpieza", "volumen_ml": 30, "stock": 20, "precio_unitario": 85.00}
+]
