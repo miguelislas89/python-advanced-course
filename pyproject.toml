@@ -9,6 +9,8 @@ packages = [{include = "src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pydantic = "^2.13.4"
+httpx = {extras = ["http2"], version = "^0.28.1"}
+sqlalchemy = ">=2.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
