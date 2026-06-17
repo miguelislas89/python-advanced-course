@@ -1,0 +1,24 @@
+{
+  "fecha_ejecucion_utc": "2026-06-17T17:28:13.310467+00:00",
+  "metricas_globales": {
+    "total_items_validos": 3,
+    "total_unidades_adquiridas": 15
+  },
+  "detalle_productos": [
+    {
+      "id": "101",
+      "producto": "Shampoo de Mango 500ml",
+      "total_venta": 540.0
+    },
+    {
+      "id": "102",
+      "producto": "Agua de Rosas 500ml",
+      "total_venta": 300.0
+    },
+    {
+      "id": "103",
+      "producto": "Jabón de Carbón",
+      "total_venta": 850.0
+    }
+  ]
+}
