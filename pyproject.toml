@@ -21,6 +21,9 @@ scikit-learn = "^1.5.2"
 typer = "^0.26.7"
 rich = "^15.0.0"
 pydantic-settings = "^2.14.1"
+grpcio = "^1.81.1"
+grpcio-tools = "^1.81.1"
+redis = "^8.0.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
@@ -48,6 +51,10 @@ line_length = 88
 [tool.ruff]
 target-version = "py312"
 line-length = 88
+exclude = [
+    "src/03_avanzado/modulo_20_interoperabilidad/pedidos_pb2.py",
+    "src/03_avanzado/modulo_20_interoperabilidad/pedidos_pb2_grpc.py"
+]
 
 [tool.ruff.lint]
 # Movimos select e ignore dentro de su sección oficial

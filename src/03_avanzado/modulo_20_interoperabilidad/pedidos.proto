@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pedidos;
+
+// El servicio de pedidos que expondrá el servidor gRPC
+service DespachadorPedidos {
+  rpc CrearPedidoBinario (SolicitudPedido) returns (RespuestaPedido);
+}
+
+// Estructura binaria de la petición
+message SolicitudPedido {
+  int32 pedido_id = 1;
+  string producto = 2;
+  int32 cantidad = 3;
+}
+
+// Estructura binaria de la respuesta
+message RespuestaPedido {
+  string estatus = 1;
+  bool procesado = 2;
+}
