@@ -1,0 +1,44 @@
+name: CI/CD Pipeline - Orders Service
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  quality-and-security:
+    name: Auditar Calidad y Seguridad
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Instalar Poetry
+        run: pip install poetry==1.7.1
+
+      - name: Instalar Dependencias
+        run: |
+          cd proyecto_final
+          poetry install
+
+      - name: 🔍 Verificación de Linter (Ruff)
+        run: |
+          cd proyecto_final
+          poetry run ruff check src/ tests/
+
+      - name: 🛡️ Auditoría de Seguridad de Dependencias (pip-audit)
+        run: |
+          cd proyecto_final
+          poetry run pip-audit
+
+      - name: 🧪 Ejecución de Pruebas Unitarias e Integración (Pytest)
+        run: |
+          cd proyecto_final
+          poetry run pytest -v tests/
